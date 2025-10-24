@@ -1,48 +1,337 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portofolio — Eric Rama</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Eric Rama</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MinimalFolio
+  * Template URL: https://bootstrapmade.com/minimalfolio-bootstrap-portfolio-template/
+  * Updated: Aug 05 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div>
-        <h1>Eric Rama</h1>
-        <p class="subtitle">IT Support &amp; .NET Developer — VB.NET | C# | Web</p>
-      </div>
-      <nav class="contact">
-        <a href="mailto:jayamahendra32@gmail.com">jayamahendra32@gmail.com</a>
-        <a href="https://github.com/jayamahendra" target="_blank" rel="noopener">GitHub</a>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center position-relative">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">My Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
     </div>
   </header>
 
-  <main class="container">
-    <section class="about">
-      <h2>Ringkasan</h2>
-      <p>
-        IT professional di rumah sakit yang mengembangkan aplikasi desktop (VB.NET) dan web ringan.
-        Di sini kumpulan proyek yang pernah saya buat—langsung ambil dari Google Sheets.
-      </p>
-    </section>
+  <main class="main">
 
-    <section class="projects">
-      <h2>Projects</h2>
-      <div id="grid" class="grid">
-        <!-- Card akan di-generate oleh script.js -->
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center gx-5 gy-5">
+
+          <div class="col-lg-7">
+            <div class="intro" data-aos="fade-right" data-aos-delay="150">
+              <div class="eyebrow d-inline-flex align-items-center gap-2 mb-3">
+                <span class="dot"></span>
+                <span class="text">ERIC RAMA JAYAMAHENDRA</span>
+              </div>
+
+              <h1 class="display-heading mb-3">
+                Spesialis IT Support & .NET Developer
+              </h1>
+
+              <p class="lead mb-4">
+                Saya Eric Rama, seorang IT Support di rumah sakit yang memiliki minat besar pada dunia pengembangan aplikasi dan informasi teknologi.
+              </p>
+
+              <div class="cta-group d-flex flex-wrap align-items-center gap-3" data-aos="zoom-in" data-aos-delay="250">
+                <a href="#portfolio" class="btn btn-ghost">
+                  View Selected Work
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+                <a href="#contact" class="link-underline">
+                  Get in touch
+                  <i class="bi bi-envelope ms-2"></i>
+                </a>
+              </div>
+
+              <div class="meta mt-4 d-flex flex-wrap align-items-center gap-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="meta-item d-flex align-items-center gap-2">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Mojokerto, Indonesia</span>
+                </div>
+                <div class="meta-item d-flex align-items-center gap-2">
+                  <i class="bi bi-circle"></i>
+                  <span>Available for freelance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <figure class="portrait-wrap position-relative" data-aos="fade-left" data-aos-delay="200">
+              <img src="assets/img/profile/profile-6.webp" alt="Profile Portrait" class="img-fluid portrait-img">
+              <figcaption class="visually-hidden">Minimal portrait preview</figcaption>
+
+              <div class="badge note" data-aos="zoom-in" data-aos-delay="300">
+                <i class="bi bi-star"></i>
+                <span>5+ yrs IT Support & .NET Developer</span>
+              </div>
+            </figure>
+          </div>
+
+        </div>
+
       </div>
-    </section>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Intro + Photo -->
+        <div class="row align-items-center justify-content-between intro-wrap gy-5">
+          <div class="col-lg-7" data-aos="fade-right" data-aos-delay="150">
+            <div class="intro-content">
+              
+              <h2 class="headline">Hi, Saya Eric — a calm-minded .NET developer crafting reliable digital experiences.</h2>
+              <p class="lead">
+                Saya Eric Rama, seorang IT Support di rumah sakit yang memiliki minat besar pada dunia pengembangan aplikasi dan informasi teknologi. Dalam pekerjaan sehari-hari, saya bertanggung jawab mendukung kelancarannya sistem informasi rumah sakit.
+              </p>
+              <p>
+                Di luar pekerjaan utama, saya juga memiliki ketertarikan besar pada pengembangan aplikasi dan teknologi informasi. Dalam pekerjaan sehari-hari, saya mendukung kelancaran sistem rumah sakit sambil aktif mengembangkan aplikasi berbasis VB.NET dan front-end web ringan.
+              </p>
+
+              <div class="cta-group">
+                <a href="#portfolio" class="btn-ghost">
+                  View My Work <i class="bi bi-arrow-down"></i>
+                </a>
+                <a href="#resume" class="link-underline">
+                  Download Resume <i class="bi bi-download"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="250">
+            <figure class="profile-figure text-center text-lg-end">
+              <img src="assets/img/profile/profile-square-7.webp" alt="Portrait of Alex" class="img-fluid profile-photo">
+              <figcaption class="profile-caption d-flex justify-content-end">
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- End Intro + Photo -->
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    
+    
+
+
+ <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section mb-5 pb-5">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Arahkan kursor atau klik gambar untuk informasi lebih lanjut</p>
+  </div>
+<div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
+
+  
+
+  <div class="row gy-4 portfolio-grid isotope-container" data-aos="fade-up" data-aos-delay="200">
+    <!-- Portfolio Items -->
+    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+      ...
+    </div>
+  </div>
+</div>
+  </section>
+<!-- /Portfolio Section -->
+
+   <!-- Contact Section -->
+<section id="contact" class="about section light-background">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+  </div>
+  <!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row align-items-stretch">
+      
+      <!-- Sidebar Contact -->
+      <div class="col-lg-5 order-lg-2 order-1" data-aos="fade-left" data-aos-delay="300">
+        <div class="contact-sidebar">
+          <div class="contact-header">
+            <h3>Get in Touch</h3>
+          </div>
+
+          <!-- Contact Info Cards -->
+          <div class="contact-section py-4">
+            <div class="container text-center">
+              <div class="row justify-content-center g-4">
+
+                <!-- Address -->
+    <div class="col-md-6 col-sm-6">
+      <div class="contact-method p-4 border rounded shadow-sm h-100">
+        <div class="d-flex flex-column align-items-center text-center h-100 justify-content-center">
+          <div class="contact-icon mb-3">
+            <i class="bi bi-geo-alt fs-2 text-primary"></i>
+          </div>
+          <div class="contact-details">
+            <span class="method-label fw-bold d-block mb-1">Address</span>
+            <p class="mb-0">Mojokerto<br>Indonesia, Jawa Timur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-8 col-sm-6">
+      <div class="contact-method p-4 border rounded shadow-sm h-100">
+        <div class="d-flex flex-column align-items-center text-center h-100 justify-content-center">
+          <div class="contact-icon mb-3">
+            <i class="bi bi-envelope fs-2 text-primary"></i>
+          </div>
+          <div class="contact-details">
+            <span class="method-label fw-bold d-block mb-1">Email</span>
+            <p class="mb-0 text-break">Jayamahendra32@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="col-md-6 col-sm-6">
+      <div class="contact-method p-4 border rounded shadow-sm h-100">
+        <div class="d-flex flex-column align-items-center text-center h-100 justify-content-center">
+          <div class="contact-icon mb-3">
+            <i class="bi bi-phone fs-2 text-primary"></i>
+          </div>
+          <div class="contact-icon">
+      <i class="bi bi-whatsapp" style="color:#25D366;"></i>
+    </div>
+          <div class="contact-details">
+            <span class="method-label fw-bold d-block mb-1">Phone</span>
+            <p class="mb-0">
+  <a href="https://wa.me/6285853045583" target="_blank" rel="noopener" class="text-decoration-none">
+    085853045583
+  </a>
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- End Contact Info Cards -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
   </main>
 
-  <footer class="site-footer">
+  <footer id="footer" class="footer">
+
     <div class="container">
-      <p>© <span id="year"></span> Eric Rama — Mojokerto, Jawa Timur</p>
+      <div class="copyright text-center ">
+        <p> <strong class="px-1 sitename">Eric Rama</strong> <span> | Made with ❤️ using Bootstrap</span></p>
+      </div>
+      
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
+
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+<script src="js/script.js"></script>
 </body>
+
 </html>
