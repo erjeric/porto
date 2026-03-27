@@ -1,0 +1,17 @@
+stages:
+  - build
+  - security
+
+build_image:
+  stage: build
+  image: docker:24
+  services:
+    - docker:24-dind
+  script:
+    - docker build -t ojt-devsecops-app .
+
+security_scan:
+  stage: security
+  image: aquasec/trivy:latest
+  script:
+    - trivy image --severity HIGH,CRITICAL ojt-devsecops-app

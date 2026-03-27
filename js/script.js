@@ -10,14 +10,23 @@ let lastCount = 0;
 // === LOAD PORTFOLIO ===
 async function loadPortfolio() {
   try {
-    const res = await fetch(API_URL + "?_=" + Date.now());
+    const res = await fetch(API_URL);
+
+    if (!res.ok) {
+      throw new Error("HTTP " + res.status);
+    }
+
     const data = await res.json();
 
+    if (!Array.isArray(data)) {
+      console.error("Data bukan array:", data);
+      return;
+    }
+
     if (data.length !== lastCount) {
-      container.innerHTML = ""; // kosongkan isi lama
+      container.innerHTML = "";
 
       data.forEach(item => {
-        // ambil kategori dari kolom spreadsheet (misal kolom: kategori)
         const kategori = item.kategori?.toLowerCase() || "web";
 
         const card = document.createElement("div");
@@ -29,10 +38,10 @@ async function loadPortfolio() {
               <img src="${item.link_gambar}" class="img-fluid" alt="${item.nama_aplikasi}" loading="lazy">
               <div class="overlay">
                 <div class="overlay-content">
-                  <a href="${item.link_gambar}" class="glightbox zoom-link" title="${item.nama_aplikasi}">
+                  <a href="${item.link_gambar}" class="glightbox zoom-link">
                     <i class="bi bi-zoom-in"></i>
                   </a>
-                  <a href="${item.link_demo || '#'}" class="details-link" title="View Project Details">
+                  <a href="${item.link_demo || '#'}" class="details-link">
                     <i class="bi bi-arrow-right"></i>
                   </a>
                 </div>
@@ -48,7 +57,7 @@ async function loadPortfolio() {
         container.appendChild(card);
       });
 
-      // === Refresh Isotope & Glightbox ===
+      // refresh UI
       if (window.Isotope) {
         setTimeout(() => {
           const iso = new Isotope(".isotope-container", {
@@ -66,8 +75,9 @@ async function loadPortfolio() {
       lastCount = data.length;
       console.log("✅ Data diperbarui:", new Date().toLocaleTimeString());
     }
+
   } catch (error) {
-    console.error("❌ Gagal memuat data:", error);
+    console.error("❌ Gagal memuat data:", error.message);
   }
 }
 
